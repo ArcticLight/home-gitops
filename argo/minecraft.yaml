@@ -52,3 +52,17 @@ spec:
   resources:
     requests:
       storage: 10Gi
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: minecraft-service
+spec:
+  selector:
+    app: minecraft
+  ports:
+  - name: minecraft-port
+    protocol: TCP
+    port: 25565
+    targetPort: game-port
+    nodePort: 25565
