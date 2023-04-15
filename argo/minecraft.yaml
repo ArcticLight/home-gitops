@@ -64,6 +64,6 @@ spec:
   ports:
   - name: minecraft-port
     protocol: TCP
-    port: 25565
+    port: 30001
     targetPort: game-port
-    nodePort: 25565
+    nodePort: 30001
